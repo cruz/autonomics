@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE definition PUBLIC "-//objectweb.org//DTD Fractal ADL 2.0//EN" "classpath://org/objectweb/proactive/core/component/adl/xml/proactive.dtd">
+
+<definition name="cruz.components.selfhealing.adl.multicastMaster">
+    
+    <!--<exportedVirtualNodes>
+        <exportedVirtualNode name="VN1">
+            <composedFrom>
+                <composingVirtualNode component="client" name="client-node"/>
+            </composedFrom>
+        </exportedVirtualNode>
+        <exportedVirtualNode name="VN2">
+            <composedFrom>
+                <composingVirtualNode component="server" name="server-node"/>
+            </composedFrom>
+        </exportedVirtualNode>
+    </exportedVirtualNodes>-->   
+
+  <interface name="master" role="server" signature="cruz.components.selfhealing.Master" />
+  <interface name="multi" role="client" signature="cruz.components.selfhealing.MultiSlave" cardinality="multicast"/>
+  
+  <content class="cruz.components.selfhealing.MasterImpl"/>
+
+  <controller desc="primitive"/>  
+  
+</definition>

@@ -2,5 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/ProActive-Programming/dist/lib/ProActive.jar"/>
+	<classpathentry kind="lib" path="/ProActive-Programming/dist/lib/fractal-api-2.0.3-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/ProActive-Programming/dist/lib/fractal-adl-2.7-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/ProActive-Programming/dist/lib/fractal-gcm-api-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

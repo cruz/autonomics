@@ -34,7 +34,7 @@
  * ################################################################
  * $$PROACTIVE_INITIAL_DEV$$
  */
-package cruz.examples.gcm.helloworld;
+package cruz.components.selfhealing;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -53,11 +53,11 @@ import org.objectweb.proactive.extensions.gcmdeployment.PAGCMDeployment;
 import org.objectweb.proactive.gcmdeployment.GCMApplication;
 import org.objectweb.proactive.gcmdeployment.GCMVirtualNode;
 
-import cruz.examples.gcm.helloworld.nf.NFService;
+//import cruz.examples.gcm.helloworld.nf.NFService;
 
 
 
-public class HelloWorld {
+public class Main {
 	
 	public static void main(final String[] args) throws Exception {
 
@@ -66,8 +66,8 @@ public class HelloWorld {
 		System.out.println(System.getProperty("java.home"));		
 		// Deployment
 		String deploymentPath = "/cruz/examples/gcm/helloworld/deployment/gcma.xml";
-		System.out.println("URL= "+ HelloWorld.class.getResource(deploymentPath));
-		GCMApplication gcma = PAGCMDeployment.loadApplicationDescriptor(HelloWorld.class.getResource(deploymentPath));
+		System.out.println("URL= "+ Main.class.getResource(deploymentPath));
+		GCMApplication gcma = PAGCMDeployment.loadApplicationDescriptor(Main.class.getResource(deploymentPath));
 		System.out.println("GCM App: "+ gcma.getDescriptorURL());
 		gcma.startDeployment();
 		gcma.waitReady();
@@ -112,16 +112,16 @@ public class HelloWorld {
         System.out.println("------------------------------------");
         System.out.println("Now making an NF call!");
         Component clientComp = find(comp, "client");
-        NFService dm = (NFService) clientComp.getFcInterface("dumb-monitor-controller");
-        dm.print("NFClientMsg");
+        //NFService dm = (NFService) clientComp.getFcInterface("dumb-monitor-controller");
+        //dm.print("NFClientMsg");
         System.out.println("------------------------------------");
-        NFService nf = (NFService) comp.getFcInterface("dummy-controller");
-        nf.print("NFmsg");
+        //NFService nf = (NFService) comp.getFcInterface("dummy-controller");
+        //nf.print("NFmsg");
         System.out.println("------------------------------------");
-        nf.print("NFmsg2");
+        //nf.print("NFmsg2");
         System.out.println("------------------------------------");
-        StringWrapper res = nf.walk();
-        System.out.println("Walked: "+ res);
+        //StringWrapper res = nf.walk();
+        //System.out.println("Walked: "+ res);
         System.out.println("------------------------------------");
         
         
